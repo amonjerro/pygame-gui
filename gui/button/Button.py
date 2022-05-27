@@ -8,8 +8,8 @@ class Button:
         self.f = f
     def execute_action(self):
         self.f()
-    def render(self, surface, font_size):
-        font = pygame.font.SysFont('Press Start 2P', font_size)
+    def render(self, surface):
+        font = pygame.font.SysFont('Arial', self.font_size)
         if self.rect:
             pygame.draw.rect(surface,(130,130,130), self.rect)
             text_surface = font.render(self.text, False, (255,255,255))

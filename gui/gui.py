@@ -9,7 +9,8 @@ class GUI:
     def add_button(self, button):
         self.buttons.append(button)
     def render_gui(self, screen):
-        map(lambda x: x.render(screen, x.font_size), self.buttons)
+        for button in self.buttons:
+            button.render(screen)
 
 def test_function():
     print('Test')
