@@ -1,6 +1,8 @@
 import pygame
 from gui.button import Button
 
+PHI = 1.62
+
 class GUI:
     def __init__(self):
         self.buttons = []
@@ -17,6 +19,8 @@ def test_function():
 
 class TestGui(GUI):
     def build(self):
-        r = pygame.Rect(120,120,200,200)
+        button_height = 100
+        button_width = int(button_height*PHI)
+        r = pygame.Rect(120,120,button_width, button_height)
         self.add_button(Button('Test', 30, test_function, r))
         
